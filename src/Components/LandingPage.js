@@ -1,7 +1,14 @@
+import './LandingPage.scss';
+import ToDoCard from './ToDoCard';
+
 const LandingPage = () => {
     return ( 
         <div className="app-landing-page">
-            This is the landing Page..
+            <div className="header-background-wrapper"></div>
+            <div className="footer-background-wrapper"></div>
+            <div className="todo-card-wrapper">
+                <ToDoCard></ToDoCard>
+            </div>
         </div>
      );
 }

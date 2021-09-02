@@ -1,0 +1,22 @@
+.todo-card-wrapper{
+    position: absolute;
+    left: 50%;
+    top : 18rem;
+    transform: translate(-50%,-50%);
+    height : 30rem;
+    width : 30rem;
+    display: flex;
+    flex-direction: column;
+    .todo-add-new-item{
+        height: 3rem;
+        background-color: rgb(182, 43, 43);
+        width: 100%;
+    }
+    .todo-added-list-items{
+        margin-top: 3rem;
+        width: 100%;
+        flex: 1;
+        background-color: rgb(41, 12, 53);
+    }
+
+}

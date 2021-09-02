@@ -3,7 +3,9 @@ import LandingPage from './Components/LandingPage';
 
 function App() {
   return (
-    <LandingPage></LandingPage>
+    <div className="app-parent-wrapper">
+      <LandingPage></LandingPage>
+    </div>
   );
 }
 
