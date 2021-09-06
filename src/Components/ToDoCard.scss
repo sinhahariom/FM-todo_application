@@ -1,3 +1,5 @@
+@import '../Styles/StyleGuide.scss';
+
 .todo-card-wrapper{
     position: absolute;
     left: 50%;
@@ -7,6 +9,14 @@
     width : 30rem;
     display: flex;
     flex-direction: column;
+    transition: 0.3s ease-in-out;
+
+    @media (max-width: $phones) { 
+       .todo-card-wrapper{
+            width : 20rem;
+       }
+     }
+
     .todo-add-new-item{
         height: 3rem;
         background-color: rgb(182, 43, 43);
@@ -17,6 +27,12 @@
         width: 100%;
         flex: 1;
         background-color: rgb(41, 12, 53);
+    }
+    .todo-tabs{
+        margin-top: 3rem;
+        width: 100%;
+        height: 3rem;
+        background-color: aqua;
     }
 
 }
