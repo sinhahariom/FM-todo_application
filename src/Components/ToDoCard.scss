@@ -1,4 +1,5 @@
 @import '../Styles/StyleGuide.scss';
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100&display=swap');
 
 .todo-card-wrapper{
     position: absolute;
@@ -19,7 +20,7 @@
 
     .todo-add-new-item{
         height: 3rem;
-        background-color: rgb(182, 43, 43);
+        background-color: teal;
         width: 100%;
     }
     .todo-added-list-items{
@@ -29,10 +30,52 @@
         background-color: rgb(41, 12, 53);
     }
     .todo-tabs{
-        margin-top: 3rem;
         width: 100%;
         height: 3rem;
-        background-color: aqua;
+        display: grid;
+        grid-template-columns: 30% 40% 30%;
+        background-color: teal;
+        font-family: 'Work Sans', sans-serif;
+        font-weight: bolder;
+        color: white;
+        font-size: 12px;
+        .todo-left-button-wrapper{
+            height: 3rem;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            span{
+                height: auto;
+                display: inline-block;
+                text-align: center;
+                cursor: pointer;
+            }
+        }
+        .todo-tabs-buttons-wrapper{
+            height: 3rem;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            span{
+                height: auto;
+                display: inline-block;
+                text-align: center;
+                cursor: pointer;
+                width: auto;
+            }
+        }
+        .todo-clear-button{
+            height: 3rem;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            span{
+                height: auto;
+                display: inline-block;
+                text-align: center;
+                cursor: pointer;
+            }
+        }
     }
 
 }
