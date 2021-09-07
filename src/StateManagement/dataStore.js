@@ -1,3 +1,5 @@
 export const todoListObject = {
-    createdAt : ''
+    activeList : [],
+    completedList : [],
+    allList : []
 }

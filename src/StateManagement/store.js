@@ -3,6 +3,6 @@ import combinedReducers from "./reducer.js";
 
 export default configureStore({
   reducer: {
-    toDoListsReducer: combinedReducers
+    toDoStateManager: combinedReducers
   }
 });
