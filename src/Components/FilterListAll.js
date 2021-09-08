@@ -7,22 +7,15 @@ import ToDoItem from './ToDoItem';
 
 const FilterListAll = () =>{
 
-    const tempData = [
-        {
-            id : 1,
-            listContent : "This is a test list item."
-        },
-        {
-            id : 2,
-            listContent : "This is a test list item."
-        }
-    ]
     const todoAllListItems = useSelector((state)=> state.toDoStateManager.allList);
-    const dispatch = useDispatch();
 
     return (
         <div className="list-all-wrapper">
-            <ToDoItem></ToDoItem>
+            {
+                todoAllListItems.map((allListItem)=>(
+                    <ToDoItem inputText={allListItem.listContent} key={allListItem.id} ></ToDoItem>
+                ))
+            }
         </div>
     )
 }

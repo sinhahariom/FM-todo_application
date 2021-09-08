@@ -7,7 +7,7 @@ import './ToDoCard.scss';
 const CreateNewTodoElements = () =>{
     return (
         <div className="add-new-todo-elements-wrapper">
-            <input type="radio"></input>
+            <div></div>
             <input type="text" placeholder="Create a new ToDo"></input>
         </div>
     );
@@ -16,9 +16,9 @@ const CreateNewTodoElements = () =>{
 const ToDoCard = () =>{
 
     //set state variables for switching between tabs
-    const [isAllTabActive, setIsAllTabActive] = useState(true);
+    const [isAllTabActive, setIsAllTabActive] = useState(false);
     const [isCompletedTabActive, setIsCompletedTabActive] = useState(false);
-    const [isActiveTabActive, setIsActiveTabActive] = useState(false);
+    const [isActiveTabActive, setIsActiveTabActive] = useState(true);
 
     //tab click handler
     const handleTabClick = (tab) =>{

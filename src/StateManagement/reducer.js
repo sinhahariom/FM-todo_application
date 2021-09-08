@@ -28,9 +28,6 @@ const updateAllList = (state,actions, type) =>{
 
     //if the list item is a new Item, insert the item
     let newAllItem = [...actions.payload];
-    newAllItem.forEach((item)=>{
-        return item.type = type;
-    });
 
     state.allList = [...state.allList, newAllItem];
 }

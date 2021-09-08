@@ -1,10 +1,10 @@
 import './ToDoItem.scss';
 
-const ToDoItem = () => {
+const ToDoItem = ({inputText}) => {
     return ( 
         <div className="todo-item-wrapper">
-             <input type="radio"></input>
-             <input type="text" placeholder="Create a new ToDo"></input>
+             <div></div>
+             <span>{inputText}</span>
         </div>
      );
 }
