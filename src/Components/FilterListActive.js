@@ -10,7 +10,7 @@ const FilterListActive = () =>{
         <div className="list-active-wrapper">
               {
                 todoAllListItems.map((allListItem)=>(
-                    <ToDoItem inputText={allListItem.listItem} key={allListItem.id} ></ToDoItem>
+                    <ToDoItem inputText={allListItem.listItem} guid={allListItem.id} key={allListItem.id} ></ToDoItem>
                 ))
             }
         </div>

@@ -1,7 +1,5 @@
-import { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
+
 import { useSelector } from 'react-redux';
-import { addNewActiveItemIntoList } from '../StateManagement/reducer';
 import './FilterListAll.scss';
 import ToDoItem from './ToDoItem';
 
@@ -13,7 +11,7 @@ const FilterListAll = () =>{
         <div className="list-all-wrapper">
             {
                 todoAllListItems.map((allListItem)=>(
-                    <ToDoItem inputText={allListItem.listItem} key={allListItem.id} ></ToDoItem>
+                    <ToDoItem inputText={allListItem.listItem} guid={allListItem.id} key={allListItem.id} ></ToDoItem>
                 ))
             }
         </div>
