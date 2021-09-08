@@ -4,6 +4,14 @@ import FilterListAll from './FilterListAll';
 import FilterListCompleted from './FilterListCompleted';
 import './ToDoCard.scss';
 
+const CreateNewTodoElements = () =>{
+    return (
+        <div className="add-new-todo-elements-wrapper">
+            <input type="radio"></input>
+            <input type="text" placeholder="Create a new ToDo"></input>
+        </div>
+    );
+}
 
 const ToDoCard = () =>{
 
@@ -33,7 +41,9 @@ const ToDoCard = () =>{
 
     return (
         <div className="todo-card-wrapper">
-            <div className="todo-add-new-item">fsf</div>
+            <div className="todo-add-new-item">
+                <CreateNewTodoElements></CreateNewTodoElements>
+            </div>
             <div className="todo-added-list-items">
                 {isActiveTabActive && <FilterListActive></FilterListActive> }
                 { isAllTabActive && <FilterListAll></FilterListAll> }

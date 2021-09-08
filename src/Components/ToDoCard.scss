@@ -11,7 +11,7 @@
     display: flex;
     flex-direction: column;
     transition: 0.3s ease-in-out;
-
+    font-family: 'Work Sans', sans-serif;
     @media (max-width: $phones) { 
        .todo-card-wrapper{
             width : 20rem;
@@ -20,25 +20,57 @@
 
     .todo-add-new-item{
         height: 3rem;
-        background-color: teal;
+        background-color: rgb(41, 12, 53);
         width: 100%;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        border-radius: 5px;
+        .add-new-todo-elements-wrapper{
+            display: flex;
+            flex-direction: row;
+            color : white;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            background-color: rgb(0, 0, 0);
+            border-radius: 5px;
+            width: 100%;
+            input[type="radio"]{
+                height: 2rem;
+                width: 2rem;
+                margin :0 1rem;
+            }
+            input[type="text"]{
+                height: 2rem;
+                width: 100%;
+                margin :0 1rem;
+                background-color: rgb(0, 0, 0);
+                outline: none;
+                border : none;
+                color: white;
+            }
+        }
     }
     .todo-added-list-items{
         margin-top: 3rem;
         width: 100%;
         flex: 1;
         background-color: rgb(41, 12, 53);
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        border-radius: 5px;
+
     }
     .todo-tabs{
         width: 100%;
         height: 3rem;
         display: grid;
         grid-template-columns: 30% 40% 30%;
-        background-color: teal;
-        font-family: 'Work Sans', sans-serif;
-        font-weight: bolder;
+        background-color: rgb(41, 12, 53);
+        border-top:  1px solid rgb(15, 109, 109);
         color: white;
         font-size: 12px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
         .todo-left-button-wrapper{
             height: 3rem;
             width: 100%;
