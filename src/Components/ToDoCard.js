@@ -22,14 +22,14 @@ const CreateNewTodoElements = () =>{
                 e.stopPropagation();
                 setNewToDo(e.target.value);
                 setActiveListItem();
-                return;
-            }
-            setNewToDo(e.target.value);
-        }
+            }else
+            setNewToDo(e.target.value)
+        }else
+        setNewToDo("");
     }
 
     const handleCreateItem = (e) =>{
-        if(newtoDo != ""){
+        if(newtoDo !== ""){
             setActiveListItem();
         }
     }
