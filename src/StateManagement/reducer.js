@@ -22,6 +22,10 @@ export const slicer = createSlice({
             state.completedList = state.completedList.filter(list=>{
                 return list.id != actions.payload.id
             })
+        },
+        clearCompletedListItems : (state,actions) =>{
+            state.completedList = actions.payload;
+            clearCompletedFromAllList(state);
         }
     }
 })
@@ -42,10 +46,15 @@ const updateAllList = (state,actions,type) =>{
     if(!ifExisting){
         //if the list item is a new Item, insert the item
         let newAllItem = actions.payload;
-
         state.allList = [...state.allList, newAllItem];
     }
 }
 
-export const {addNewActiveItemIntoList,addNewCompletedItemIntoList,removeTransitionItemFromActiveList, removeTransitionItemFromCompletedList}  = slicer.actions;
+ const clearCompletedFromAllList = (state) =>{
+     state.allList = state.allList.filter(list=>{
+         return list.type !== 'completed'
+     })
+ }
+
+export const {addNewActiveItemIntoList,addNewCompletedItemIntoList,removeTransitionItemFromActiveList, removeTransitionItemFromCompletedList, clearCompletedListItems}  = slicer.actions;
 export default slicer.reducer;

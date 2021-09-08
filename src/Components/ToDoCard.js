@@ -6,6 +6,8 @@ import FilterListCompleted from "./FilterListCompleted";
 import "./ToDoCard.scss";
 import { v4 as uuidv4 } from "uuid";
 import { addNewActiveItemIntoList } from "../StateManagement/reducer";
+import { useSelector } from "react-redux";
+import { clearCompletedListItems } from '../StateManagement/reducer';
 
 const CreateNewTodoElements = () => {
   //state variable for the new todo input
@@ -52,6 +54,13 @@ const CreateNewTodoElements = () => {
 };
 
 const ToDoCard = () => {
+
+  //count for the active list items
+  const count = useSelector((state)=>state.toDoStateManager.activeList.length);
+
+  //dispatcher for clear completed
+  const dispatcher = useDispatch();
+
   //set state variables for switching between tabs
   const [isAllTabActive, setIsAllTabActive] = useState(false);
   const [isCompletedTabActive, setIsCompletedTabActive] = useState(false);
@@ -78,6 +87,10 @@ const ToDoCard = () => {
     }
   };
 
+  const handleClearCompleted = () =>{
+      dispatcher(clearCompletedListItems([]));
+  }
+
   return (
     <div className="todo-card-wrapper">
       <div className="todo-add-new-item">
@@ -90,14 +103,14 @@ const ToDoCard = () => {
       </div>
       <div className="todo-tabs">
         <div className="todo-left-button-wrapper">
-          <span>5 Items Left</span>
+          <span>{count} Items Left</span>
         </div>
         <div className="todo-tabs-buttons-wrapper">
           <span onClick={() => handleTabClick("All")}>All</span>
           <span onClick={() => handleTabClick("Active")}>Active</span>
           <span onClick={() => handleTabClick("Completed")}>Completed</span>
         </div>
-        <div className="todo-clear-button">
+        <div className="todo-clear-button" onClick={handleClearCompleted}>
           <span>Clear Completed</span>
         </div>
       </div>
