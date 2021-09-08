@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 import { addNewActiveItemIntoList } from '../StateManagement/reducer';
 import './FilterListAll.scss';
+import ToDoItem from './ToDoItem';
 
 const FilterListAll = () =>{
 
@@ -19,12 +20,10 @@ const FilterListAll = () =>{
     const todoAllListItems = useSelector((state)=> state.toDoStateManager.allList);
     const dispatch = useDispatch();
 
-    useEffect(()=>{
-        dispatch(addNewActiveItemIntoList(tempData));
-    },[])
-
     return (
-        <div className="list-all-wrapper">All Works !</div>
+        <div className="list-all-wrapper">
+            <ToDoItem></ToDoItem>
+        </div>
     )
 }
 

@@ -16,7 +16,7 @@ const CreateNewTodoElements = () =>{
 const ToDoCard = () =>{
 
     //set state variables for switching between tabs
-    const [isAllTabActive, setIsAllTabActive] = useState(false);
+    const [isAllTabActive, setIsAllTabActive] = useState(true);
     const [isCompletedTabActive, setIsCompletedTabActive] = useState(false);
     const [isActiveTabActive, setIsActiveTabActive] = useState(false);
 

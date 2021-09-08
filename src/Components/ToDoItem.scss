@@ -1,0 +1,24 @@
+.todo-item-wrapper{
+    display: flex;
+    flex-direction: row;
+    color : white;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+    width: 100%;
+    cursor: pointer;
+    input[type="radio"]{
+        height: 2rem;
+        width: 2rem;
+        margin :0 1rem;
+    }
+    input[type="text"]{
+        height: 2rem;
+        width: 100%;
+        margin :0 1rem;
+        outline: none;
+        border : none;
+        color: white;
+        background: transparent;
+    }
+}
