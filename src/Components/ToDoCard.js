@@ -106,9 +106,9 @@ const ToDoCard = () => {
           <span>{count} Items Left</span>
         </div>
         <div className="todo-tabs-buttons-wrapper">
-          <span onClick={() => handleTabClick("All")}>All</span>
-          <span onClick={() => handleTabClick("Active")}>Active</span>
-          <span onClick={() => handleTabClick("Completed")}>Completed</span>
+          <span onClick={() => handleTabClick("All")} className={isAllTabActive ? 'tabs selected-tab' : 'tabs'} >All</span>
+          <span onClick={() => handleTabClick("Active")} className={isActiveTabActive ? 'tabs selected-tab' : 'tabs'} >Active</span>
+          <span onClick={() => handleTabClick("Completed")} className={isCompletedTabActive ? 'tabs selected-tab' : 'tabs'} >Completed</span>
         </div>
         <div className="todo-clear-button" onClick={handleClearCompleted}>
           <span>Clear Completed</span>

@@ -100,12 +100,15 @@
             width: 100%;
             display: flex;
             align-items: center;
-            span{
+            .tabs{
                 height: auto;
                 display: inline-block;
                 text-align: center;
                 cursor: pointer;
                 width: auto;
+                &.selected-tab{
+                    font-weight: bolder;
+                }
             }
         }
         .todo-clear-button{
