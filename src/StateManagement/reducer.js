@@ -6,6 +6,7 @@ export const slicer = createSlice({
     initialState : todoListObject,
     reducers : {
         addNewActiveItemIntoList : (state,actions) => {
+            console.log(state, actions);
             state.activeList = [...state.activeList, actions.payload];
             updateAllList(state,actions, 'active');
         },
@@ -16,7 +17,7 @@ export const slicer = createSlice({
     }
 })
 
-const updateAllList = (state,actions, type) =>{
+const updateAllList = (state,actions,type) =>{
 
     //if the list item exits before, update the type
     [...state.allList].forEach(listItem=>{
@@ -27,7 +28,7 @@ const updateAllList = (state,actions, type) =>{
     })
 
     //if the list item is a new Item, insert the item
-    let newAllItem = [...actions.payload];
+    let newAllItem = actions.payload;
 
     state.allList = [...state.allList, newAllItem];
 }

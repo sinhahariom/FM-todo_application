@@ -67,7 +67,10 @@
         background-color: rgb(41, 12, 53);
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
         border-radius: 5px;
-
+        overflow: scroll;
+        &::-webkit-scrollbar { 
+            display: none; 
+        }
     }
     .todo-tabs{
         width: 100%;

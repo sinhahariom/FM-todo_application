@@ -2,6 +2,7 @@
 
 npm install @reduxjs/toolkit
 npm install react-redux
+npm i uuid
 
 #Project Architecture
 

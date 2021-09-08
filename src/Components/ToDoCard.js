@@ -1,14 +1,51 @@
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
 import FilterListActive from './FilterListActive';
 import FilterListAll from './FilterListAll';
 import FilterListCompleted from './FilterListCompleted';
 import './ToDoCard.scss';
+import { v4 as uuidv4 } from 'uuid';
+import {addNewActiveItemIntoList} from '../StateManagement/reducer';
 
 const CreateNewTodoElements = () =>{
+
+    //state variable for the new todo input
+    const [newtoDo, setNewToDo] = useState("");
+
+    //dispatcher for the new todo created
+    const dispatcher = useDispatch();
+
+    const handleCreateNewItem = (e)=>{
+        if(e.target.value !== ""){
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                e.stopPropagation();
+                setNewToDo(e.target.value);
+                setActiveListItem();
+                return;
+            }
+            setNewToDo(e.target.value);
+        }
+    }
+
+    const handleCreateItem = (e) =>{
+        if(newtoDo != ""){
+            setActiveListItem();
+        }
+    }
+
+    const setActiveListItem = () =>{
+        let temp = {};
+        temp.id = uuidv4();
+        temp.listItem = newtoDo;
+        temp.type = 'active';
+        dispatcher(addNewActiveItemIntoList(temp));
+    }
+
     return (
         <div className="add-new-todo-elements-wrapper">
-            <div></div>
-            <input type="text" placeholder="Create a new ToDo"></input>
+            <div onClick={(e)=>handleCreateItem(e)}></div>
+            <input type="text" placeholder="Create a new ToDo" onKeyDown={(e)=>handleCreateNewItem(e)} ></input>
         </div>
     );
 }

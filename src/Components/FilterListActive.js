@@ -5,12 +5,12 @@ import ToDoItem from './ToDoItem';
 const FilterListActive = () =>{
 
     const todoAllListItems = useSelector((state)=> state.toDoStateManager.activeList);
-
+    
     return (
         <div className="list-active-wrapper">
               {
                 todoAllListItems.map((allListItem)=>(
-                    <ToDoItem inputText={allListItem.listContent} key={allListItem.id} ></ToDoItem>
+                    <ToDoItem inputText={allListItem.listItem} key={allListItem.id} ></ToDoItem>
                 ))
             }
         </div>
