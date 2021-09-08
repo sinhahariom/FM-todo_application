@@ -31,4 +31,12 @@
         color: white;
         background: transparent;
     }
+    &.active{
+
+    }
+    &.completed{
+        span{
+            text-decoration: line-through;
+        }
+    }
 }

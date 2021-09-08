@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import { addNewActiveItemIntoList, addNewCompletedItemIntoList, removeTransitionItemFromActiveList, removeTransitionItemFromCompletedList} from '../StateManagement/reducer';
 import './ToDoItem.scss';
 
-const ToDoItem = ({inputText,guid}) => {
+const ToDoItem = ({inputText,guid, type}) => {
      
      //get the All todo List 
      const allList = useSelector((state)=>state.toDoStateManager.allList);
@@ -32,8 +32,9 @@ const ToDoItem = ({inputText,guid}) => {
           }
           //add another check for error page
      }
+     console.log(type);
     return ( 
-        <div className="todo-item-wrapper">
+        <div className={type === 'active' ? 'todo-item-wrapper active' : 'todo-item-wrapper completed'}>
              <div onClick={handleRadioSelect}></div>
              <span>{inputText}</span>
         </div>

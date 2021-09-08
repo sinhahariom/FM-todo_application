@@ -11,7 +11,7 @@ const FilterListAll = () =>{
         <div className="list-all-wrapper">
             {
                 todoAllListItems.map((allListItem)=>(
-                    <ToDoItem inputText={allListItem.listItem} guid={allListItem.id} key={allListItem.id} ></ToDoItem>
+                    <ToDoItem inputText={allListItem.listItem} guid={allListItem.id} type={allListItem.type} key={allListItem.id} ></ToDoItem>
                 ))
             }
         </div>
