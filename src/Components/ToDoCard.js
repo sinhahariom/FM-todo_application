@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import FilterListActive from "./FilterListActive";
 import FilterListAll from "./FilterListAll";
@@ -26,8 +26,8 @@ const CreateNewTodoElements = () => {
     }
   };
 
-  const setActiveListItem = () => {
-    if (!newtoDo == "") {
+  const setActiveListItem = useCallback(() => {
+    if (!(newtoDo.length === 0)) {
       let temp = {};
       temp.id = uuidv4();
       temp.listItem = newtoDo;
@@ -35,12 +35,12 @@ const CreateNewTodoElements = () => {
       dispatcher(addNewActiveItemIntoList(temp));
       setNewToDo("");
     }
-  };
+  },[dispatcher,newtoDo]);
 
-  //tosend the data after the newTodo is updated
+  //tosend the data after the newTodo is updated 
   useEffect(() => {
     setActiveListItem();
-  }, [newtoDo]);
+  }, [newtoDo,setActiveListItem]);
 
   return (
     <div className="add-new-todo-elements-wrapper">
@@ -84,6 +84,9 @@ const ToDoCard = () => {
       case "Completed":
         setIsCompletedTabActive((prev) => !prev);
         break;
+
+      default : 
+      break;
     }
   };
 

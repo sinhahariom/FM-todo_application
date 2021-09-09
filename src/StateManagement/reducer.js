@@ -15,12 +15,12 @@ export const slicer = createSlice({
         },
         removeTransitionItemFromActiveList : (state, actions) => {
             state.activeList = state.activeList.filter(list=>{
-                return list.id != actions.payload.id
+                return list.id !== actions.payload.id
             })
         },
         removeTransitionItemFromCompletedList : (state, actions) =>{
             state.completedList = state.completedList.filter(list=>{
-                return list.id != actions.payload.id
+                return list.id !== actions.payload.id
             })
         },
         clearCompletedListItems : (state,actions) =>{

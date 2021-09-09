@@ -25,14 +25,13 @@ const ToDoItem = ({inputText,guid, type}) => {
                tempObject.type = 'completed';
                dispatcher(removeTransitionItemFromActiveList(selectedItem[0]));
                dispatcher(addNewCompletedItemIntoList(tempObject));
-          }else if(type='completed'){
+          }else if(type ==='completed'){
                tempObject.type = 'active';
                dispatcher(removeTransitionItemFromCompletedList(selectedItem[0]));
                dispatcher(addNewActiveItemIntoList(tempObject));
           }
           //add another check for error page
      }
-     console.log(type);
     return ( 
         <div className={type === 'active' ? 'todo-item-wrapper active' : 'todo-item-wrapper completed'}>
              <div onClick={handleRadioSelect}></div>

@@ -10,8 +10,8 @@ const FilterListCompleted = () =>{
     return (
         <div className="list-completed-wrapper">
              {
-                todoCompletedListItems.map((allListItem)=>(
-                    <ToDoItem inputText={allListItem.listItem} guid={allListItem.id} type={allListItem.type} key={allListItem.id} ></ToDoItem>
+                todoCompletedListItems.map((completedListItem)=>(
+                    <ToDoItem inputText={completedListItem.listItem} guid={completedListItem.id} type={completedListItem.type} key={completedListItem.id} ></ToDoItem>
                 ))
             }
         </div>
