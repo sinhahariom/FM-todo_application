@@ -1,0 +1,15 @@
+@import '../Styles/StyleGuide.scss';
+
+.app-landing-page{
+    height : 100%;
+    width : 100%;
+    display: grid;
+    grid-template-rows: 15rem 1fr;
+    position: relative;
+    .header-background-wrapper{
+        background-image: $webViewLightThemeHeaderBackkground ;
+    }
+    .footer-background-wrapper{
+        background-color : rgb(21, 4, 37);
+    }
+}

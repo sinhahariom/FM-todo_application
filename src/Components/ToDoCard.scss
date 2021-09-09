@@ -1,0 +1,128 @@
+@import '../Styles/StyleGuide.scss';
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100&display=swap');
+
+.todo-card-wrapper{
+    position: absolute;
+    left: 50%;
+    top : 18rem;
+    transform: translate(-50%,-50%);
+    height : 30rem;
+    width : 30rem;
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s ease-in-out;
+    font-family: 'Work Sans', sans-serif;
+    @media (max-width: $phones) { 
+       .todo-card-wrapper{
+            width : 20rem;
+       }
+     }
+
+    .todo-add-new-item{
+        height: 3rem;
+        background-color: rgb(41, 12, 53);
+        width: 100%;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        border-radius: 5px;
+        .add-new-todo-elements-wrapper{
+            display: flex;
+            flex-direction: row;
+            color : white;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            background-color: rgb(0, 0, 0);
+            border-radius: 5px;
+            width: 100%;
+            div{
+                height: 2rem;
+                width: 2rem;
+                margin :0 1rem;
+                background-image: url("data:image/svg+xml,%3C!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'%3E%3Csvg enable-background='new 0 0 512 512' id='Layer_1' version='1.1' viewBox='0 0 512 512' xml:space='preserve' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3ClinearGradient gradientUnits='userSpaceOnUse' id='SVGID_1_' x1='256' x2='256' y1='512' y2='-9.094947e-013'%3E%3Cstop offset='0' style='stop-color:%234CB8C4'/%3E%3Cstop offset='1' style='stop-color:%233CD3AD'/%3E%3C/linearGradient%3E%3Ccircle cx='256' cy='256' fill='url(%23SVGID_1_)' r='256'/%3E%3Cpath d='M375,154L194.2,334.8L137,277.7c-4.3-4.3-11.2-4.3-15.4,0c-4.3,4.3-4.3,11.2,0,15.4l64.9,64.9 c2.1,2.1,4.9,3.2,7.7,3.2c2.8,0,5.6-1.1,7.7-3.2l188.5-188.5c4.3-4.3,4.3-11.2,0-15.4C386.1,149.8,379.2,149.8,375,154z' fill='%23FFFFFF'/%3E%3C/svg%3E");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                filter: brightness(0.5);
+                cursor: pointer;
+                transition: 0.3s ease-in;
+                &:hover{
+                    filter: none;
+                }
+            }
+            input[type="text"]{
+                height: 2rem;
+                width: 100%;
+                margin :0 1rem;
+                background-color: rgb(0, 0, 0);
+                outline: none;
+                border : none;
+                color: white;
+            }
+        }
+    }
+    .todo-added-list-items{
+        margin-top: 3rem;
+        width: 100%;
+        flex: 1;
+        background-color: rgb(41, 12, 53);
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        border-radius: 5px;
+        overflow: scroll;
+        &::-webkit-scrollbar { 
+            display: none; 
+        }
+    }
+    .todo-tabs{
+        width: 100%;
+        height: 3rem;
+        display: grid;
+        grid-template-columns: 30% 40% 30%;
+        background-color: rgb(41, 12, 53);
+        color: white;
+        font-size: 12px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        .todo-left-button-wrapper{
+            height: 3rem;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            span{
+                height: auto;
+                display: inline-block;
+                text-align: center;
+                cursor: pointer;
+            }
+        }
+        .todo-tabs-buttons-wrapper{
+            height: 3rem;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            .tabs{
+                height: auto;
+                display: inline-block;
+                text-align: center;
+                cursor: pointer;
+                width: auto;
+                &.selected-tab{
+                    font-weight: bolder;
+                }
+            }
+        }
+        .todo-clear-button{
+            height: 3rem;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            span{
+                height: auto;
+                display: inline-block;
+                text-align: center;
+                cursor: pointer;
+            }
+        }
+    }
+
+}
