@@ -1,0 +1,23 @@
+@import '../../Styles/StyleGuide.scss';
+
+.app-landing-page{
+    height : 100%;
+    width : 100%;
+    position: relative;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    .header-background-wrapper{
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url($landing-background);
+    }
+    .charts-wrapper{
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url($landing-charts-background);
+        display: grid;
+        justify-content: center;
+        align-content: center;
+    }
+}

@@ -1,5 +1,5 @@
 import './App.scss';
-import LandingPage from './Components/LandingPage';
+import LandingPage from './Components/ToDoModule/LandingPage';
 
 function App() {
   return (

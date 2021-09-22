@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
-import { addNewActiveItemIntoList, addNewCompletedItemIntoList, removeTransitionItemFromActiveList, removeTransitionItemFromCompletedList} from '../StateManagement/reducer';
+import { addNewActiveItemIntoList, addNewCompletedItemIntoList, removeTransitionItemFromActiveList, removeTransitionItemFromCompletedList} from '../../StateManagement/reducer';
 import './ToDoItem.scss';
 
 const ToDoItem = ({inputText,guid, type}) => {

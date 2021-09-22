@@ -1,10 +1,10 @@
-@import '../Styles/StyleGuide.scss';
+@import '../../Styles/StyleGuide.scss';
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100&display=swap');
 
 .todo-card-wrapper{
     position: absolute;
     left: 50%;
-    top : 18rem;
+    top : 50%;
     transform: translate(-50%,-50%);
     height : 30rem;
     width : 30rem;

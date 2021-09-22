@@ -5,9 +5,9 @@ import FilterListAll from "./FilterListAll";
 import FilterListCompleted from "./FilterListCompleted";
 import "./ToDoCard.scss";
 import { v4 as uuidv4 } from "uuid";
-import { addNewActiveItemIntoList } from "../StateManagement/reducer";
+import { addNewActiveItemIntoList } from "../../StateManagement/reducer";
 import { useSelector } from "react-redux";
-import { clearCompletedListItems } from '../StateManagement/reducer';
+import { clearCompletedListItems } from '../../StateManagement/reducer';
 
 const CreateNewTodoElements = () => {
   //state variable for the new todo input
